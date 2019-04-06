@@ -1,0 +1,49 @@
+hi
+
+
+<div class="row">
+  <%= tag.div id: :boards, data: { greetings: @greetings.to_json(include: :phrases)} %>
+</div>
+
+<!-- <div class="row">
+  <div class="col-sm-6">
+    <h1>Greetings</h1>
+  </div>
+
+  <div class="col-sm-6 text-right">
+  <%= link_to new_greeting_path, class: 'btn btn-primary' do %>
+    Add New Greeting
+  <% end %>
+  </div>
+</div>
+
+
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+
+
+            <th>Message</th>
+
+          <th></th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @greetings.each do |greeting| %>
+        <%= content_tag :tr, id: dom_id(greeting), class: dom_class(greeting) do %>
+
+
+                      <td><%= greeting.message %></td>
+
+
+            <td><%= link_to 'Show', greeting %></td>
+
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div> -->

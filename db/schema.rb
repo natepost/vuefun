@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_213445) do
+ActiveRecord::Schema.define(version: 2019_04_06_225552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 2019_04_06_213445) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "greetings", force: :cascade do |t|
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "notifications", force: :cascade do |t|
     t.bigint "recipient_id"
     t.bigint "actor_id"
@@ -44,6 +50,15 @@ ActiveRecord::Schema.define(version: 2019_04_06_213445) do
     t.string "notifiable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "phrases", force: :cascade do |t|
+    t.bigint "greeting_id"
+    t.string "name"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["greeting_id"], name: "index_phrases_on_greeting_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -76,5 +91,6 @@ ActiveRecord::Schema.define(version: 2019_04_06_213445) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "phrases", "greetings"
   add_foreign_key "services", "users"
 end

@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to phrases_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    All Phrases
+  <% end %>
+  <%= link_to edit_phrase_path(@phrase), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show phrase</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Greeting:</dt>
+  <dd><%= @phrase.greeting %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @phrase.name %></dd>
+
+  <dt>Position:</dt>
+  <dd><%= @phrase.position %></dd>
+
+</dl>
