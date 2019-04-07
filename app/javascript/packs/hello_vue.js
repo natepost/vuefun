@@ -6,10 +6,11 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
-import { MdButton, MdContent, MdTabs, MdEmptyState } from 'vue-material/dist/components'
+import { MdButton, MdContent, MdTabs, MdEmptyState, MdIcon } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(MdButton)
+Vue.use(MdIcon)
 Vue.use(MdTabs)
 Vue.use(MdEmptyState)
 
