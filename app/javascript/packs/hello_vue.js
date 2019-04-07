@@ -11,12 +11,17 @@ new Vue({
   el: '#blog-post-demo',
   data: function() {
     return {
-      message: ''
+      message: '',
     }
+  },
+
+  mounted() {
+    // alert('ready')
   },
     template: '<App />',
     components: { App }
-  })
+  });
+
 
 
 //

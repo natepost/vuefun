@@ -2,17 +2,21 @@
   <div>
     <p>hello there: {{ message }}</p>
     <input v-model="message" />
-
     <ButtonCounter />
+
+    <div class="card">
+      <Names />
+    </div>
 
   </div>
 </template>
 
 <script>
 import ButtonCounter from './components/ButtonCounter.vue'
+import Names from './components/Names.vue'
 
 export default {
-  components: { ButtonCounter },
+  components: { ButtonCounter, Names },
 
   data: function() {
     return {
