@@ -1,8 +1,11 @@
 <template>
   <div>
     <ul>
-      <li v-for="task in tasks" v-text="task.description"></li>
-      
+
+      <li v-for="task in tasks" v-text="task.description">
+        Status: {{ task.completed }}
+      </li>
+
     </ul>
   </div>
 </template>

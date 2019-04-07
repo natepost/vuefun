@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row">
-
+      <EmptyStateBasic />
       <hr />
     </div>
 
@@ -19,10 +19,11 @@
 <script>
 import ButtonCounter from './components/ButtonCounter.vue'
 import Names from './components/Names.vue'
+import EmptyStateBasic from './components/EmptyState.vue'
 
 
 export default {
-  components: { ButtonCounter, Names },
+  components: { ButtonCounter, Names, EmptyStateBasic },
 
   data: function() {
     return {
