@@ -4,17 +4,19 @@
 // to the head of your layout file,
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
+import Vue from 'vue/dist/vue.esm'
+import App from '../app.vue'
 
 new Vue({
   el: '#blog-post-demo',
-  data: {
-    posts: [
-      { id: 1, title: 'My journey with Vue' },
-      { id: 2, title: 'Blogging with Vue' },
-      { id: 3, title: 'Why Vue is so fun' }
-    ]
-  }
-})
+  data: function() {
+    return {
+      message: ''
+    }
+  },
+    template: '<App />',
+    components: { App }
+  })
 
 
 //
