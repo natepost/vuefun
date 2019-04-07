@@ -7,7 +7,7 @@
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
-new Vue({
+var nate = new Vue({
   el: '#blog-post-demo',
   data: function() {
     return {
@@ -22,6 +22,9 @@ new Vue({
     components: { App }
   });
 
+Vue.component('task', {
+  template: '<li>Natebar</li>'
+})
 
 
 //

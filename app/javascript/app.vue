@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="row">
+
+      <hr />
+    </div>
+
     <p>hello there: {{ message }}</p>
     <input v-model="message" />
     <ButtonCounter />
@@ -14,6 +19,7 @@
 <script>
 import ButtonCounter from './components/ButtonCounter.vue'
 import Names from './components/Names.vue'
+
 
 export default {
   components: { ButtonCounter, Names },
