@@ -6,6 +6,9 @@
 
 //
 //
+// import Vue from 'vue/dist/vue.esm'
+// import App from '../app.vue'
+
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()

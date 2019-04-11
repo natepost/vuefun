@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="app">
+    <experiment>Hi app.vue</experiment>
     <div class="row">
       <EmptyStateBasic />
       <hr />
@@ -17,17 +18,19 @@
 </template>
 
 <script>
-import ButtonCounter from './components/ButtonCounter.vue'
-import Names from './components/Names.vue'
-import EmptyStateBasic from './components/EmptyState.vue'
+import Experiment from './components/Experiment.vue'
+// import ButtonCounter from './components/ButtonCounter.vue'
+// import Names from './components/Names.vue'
+// import EmptyStateBasic from './components/EmptyState.vue'
 
 
 export default {
-  components: { ButtonCounter, Names, EmptyStateBasic },
+  name: 'app',
+  components: { Experiment },
 
   data: function() {
     return {
-      message: "Hi, Nate!"
+
     }
   }
 }

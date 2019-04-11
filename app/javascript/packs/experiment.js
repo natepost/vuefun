@@ -1,45 +1,15 @@
 import Vue from 'vue/dist/vue.esm'
 import Experiment from '../components/Experiment.vue'
+import { MdDatepicker, MdButton } from 'vue-material/dist/components'
+import 'vue-material/dist/vue-material.min.css'
 
-// Define a new component
-Vue.component('Experiment', {
-  data() {
-    return {
-      message: "hello"
-    }
-  },
-  template: `<div class="card text-center">
-      <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
-
-         <div class="card-body">
-            <h5 class="card-title">
-              Experiment Title:
-              {{ message }}
-              <slot name="header"></slot>
-            </h5>
-            <p class="card-text">
-              <slot></slot>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </p>
-        </div>
-      </div>
-      `,
-});
+Vue.use(MdDatepicker)
+Vue.use(MdButton)
+Vue.use(Experiment)
 
   new Vue({
     el: '#experiment-demo',
-    data: {
-    }
+    data: {},
+    template: '<Experiment />',
+    components: { Experiment }
   })
