@@ -35,6 +35,9 @@
 </template>
 
 <script>
+// import { MdDatepicker, MdButton, MdTabs } from 'vue-material/dist/components'
+// import { MdButton, MdTabs } from 'vue-material/dist/components'
+// import 'vue-material/dist/vue-material.min.css'
 import Datepicker from '../components/vuematerial/Datepicker.vue'
 
 export default {
