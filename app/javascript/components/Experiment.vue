@@ -19,8 +19,10 @@
             <h5 class="card-title">
               Experiment Title:
               {{ message }}
-              <input v-model="message" class="input" placeholder="add some text">
-              <slot name="header"></slot>
+              <div class="row">
+                <input v-model="message" class="input" placeholder="add a title">
+                <slot name="header"></slot>
+              </div>
             </h5>
             <p class="card-text">
               <slot></slot>
@@ -30,6 +32,8 @@
               </div>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </p>
+            <h3>Steps:</h3>
+            <empty-state></empty-state>
         </div>
       </div>
 </template>
@@ -39,10 +43,11 @@
 // import { MdButton, MdTabs } from 'vue-material/dist/components'
 // import 'vue-material/dist/vue-material.min.css'
 import Datepicker from '../components/vuematerial/Datepicker.vue'
+import EmptyState from '../components/vuematerial/EmptyState.vue'
 
 export default {
   name: 'Experiment',
-  components: { Datepicker },
+  components: { Datepicker, EmptyState },
   data() {
     return {
       message: ''

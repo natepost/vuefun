@@ -1,12 +1,13 @@
 import Vue from 'vue/dist/vue.esm'
 import Experiment from '../components/Experiment.vue'
-import { MdDatepicker, MdButton, MdTabs } from 'vue-material/dist/components'
+import { MdDatepicker, MdButton, MdTabs, MdEmptyState, MdIcon } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(MdButton)
+Vue.use(MdIcon)
 Vue.use(MdDatepicker)
-// Vue.use(MdTabs)
-// Vue.use(MdEmptyState)
+Vue.use(MdTabs)
+Vue.use(MdEmptyState)
 
 Vue.use(Experiment)
 
